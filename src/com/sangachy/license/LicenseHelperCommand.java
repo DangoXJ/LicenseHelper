@@ -62,7 +62,7 @@ public class LicenseHelperCommand {
                     return null;
                 }
 
-                if (!commandLine.hasOption("a") || !commandLine.hasOption("u")) {
+                if (!commandLine.hasOption("a") && !commandLine.hasOption("u")) {
                     System.out.println("疑？你不告诉我要做什么我怎么办呢？！");
                     printHelp();
                     return null;
@@ -98,8 +98,8 @@ public class LicenseHelperCommand {
             //envKey = "";
         }
         Hashtable hashTable = new Hashtable();
-        hashTable.put("", licensePath);
-        hashTable.put(" ", envKey);
+        //hashTable.put("", licensePath);
+        //hashTable.put(" ", envKey);
         SingleTask task = new UploadLicenseTask();
         task.preExecute(hashTable);
         task.excute();
@@ -120,8 +120,8 @@ public class LicenseHelperCommand {
             // esnKey = "";
         }
         Hashtable hashTable = new Hashtable();
-        hashTable.put("", templatePath);
-        hashTable.put(" ", esnKey);
+        //hashTable.put("", templatePath);
+        //hashTable.put(" ", esnKey);
         SingleTask task = new ApplyLicenseTask();
 
         task.preExecute(hashTable);

@@ -8,7 +8,6 @@ package com.sangachy.license;
  */
 public class Main {
     public static void main(String[] args) {
-        LicenseHelperCommand command = new LicenseHelperCommand();
         String[] str = {"-lp", ""};
         LicenseHelperCommand licenseHelperCommand = new LicenseHelperCommand();
         licenseHelperCommand.parser(str);
